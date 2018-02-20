@@ -28,7 +28,7 @@ function CalcularPrecio ()
       
         if (cantidadLamparas == 5 )
             {
-                if (marca = "ArgentinaLuz")
+                if (marca == "ArgentinaLuz")
                 {
                 total = cantidadLamparas * precio * 0.60 ;//40% de descuento
                 document.getElementById("precioDescuento").value = total;
@@ -36,11 +36,40 @@ function CalcularPrecio ()
                 else
                 {
                 total = cantidadLamparas * precio * 0.70 ;//30% de descuento
-                document.getElementById("precioDescuento").value = total; 
+                document.getElementById("precioDescuento").value = total ; 
                 }
             }
-        
-
+        if (cantidadLamparas == 4)
+            {
+                if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+                {
+                total = cantidadLamparas* precio * 0.75; //25% de descuento
+                document.getElementById("precioDescuento").value = total;    
+                }
+                else
+                {
+                total = cantidadLamparas* precio *0.80; //20%de descuento   
+                document.getElementById("precioDescuento").value =total ; 
+                }
+            }
+        if (cantidadLamparas == 3)
+            {
+                if (marca =="ArgentinaLuz")
+                {
+                total = cantidadLamparas* precio * 0.85; //15% de descuento
+                document.getElementById("precioDescuento").value = total;    
+                }
+                else if (marca == "FelipeLamparas")
+                {
+                total = cantidadLamparas* precio * 0.90; //10% de descuento
+                document.getElementById("precioDescuento").value = total;    
+                }
+                else 
+                {
+                total = cantidadLamparas* precio * 0.95; //5% de descuento
+                document.getElementById("precioDescuento").value = total;    
+                }
+            }
 
 
 
